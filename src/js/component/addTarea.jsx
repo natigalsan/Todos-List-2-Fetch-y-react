@@ -2,12 +2,7 @@ import React, { useEffect, useState } from "react";
 
 export const AddTarea = ({ Tareas, setLista }) => {
 
-	let url = ("http://assets.breatheco.de/apis/fake/todos/user/natigalsan")
-	let options = {
-		method: 'GET', 
-		// or POST
-		headers: {'Content-Type': aplication:J ""}
-	}
+	
     // const [tasks, setTasks] = useState ("")
     // const [task0List, setTaskList] = useState([]);
     // const [loading, setLoading] = useState();
@@ -33,6 +28,7 @@ export const AddTarea = ({ Tareas, setLista }) => {
                                 {/*-------------- BUTTON DE ELIMINAR TAREA---------------- */}
 								<div className="col-3">
 									<button
+										style = {{color: "#4242ff"}}
 										onClick={function () {
 											let re = Tareas.filter(
 												(valor, index) => {
