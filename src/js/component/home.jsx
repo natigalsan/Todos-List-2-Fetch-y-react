@@ -6,23 +6,23 @@ const Home = () => {
 	const [input, setInput] = useState("");
 	const [lista, setLista] = useState([]);
 
-	function conseguirDatos() {
-		var requestOptions = {
-			method: 'GET', 
-			redirect: 'follow'
-		}
-		fetch(
-			"https://assets.breatheco.de/apis/fake/todos/user/natigalsan",
-			requestOptions
-		)
-			.then((response) => response.json())
-			.then((result) => setLista(result))
-			.catch((error) => console.log("error", error));
-	}
+	// function conseguirDatos() {
+	// 	var requestOptions = {
+	// 		method: 'GET', 
+	// 		redirect: 'follow'
+	// 	}
+	// 	fetch(
+	// 		"https://assets.breatheco.de/apis/fake/todos/user/natigalsan",
+	// 		requestOptions
+	// 	)
+	// 		.then((response) => response.json())
+	// 		.then((result) => setLista(result))
+	// 		.catch((error) => console.log("error", error));
+	// }
 
-	useEffect((setLista) => {
-		conseguirDatos(setLista);
-	}, []);
+	// useEffect((setLista) => {
+	// 	conseguirDatos(setLista);
+	// }, []);
 
 	return (
 		<div className="container" id="hoja_de_tareas">
@@ -48,7 +48,7 @@ const Home = () => {
 						}}
 						></button>
 						{lista?.map((object, index)=> {
-							return <li key = {index}>{object.label}</li>
+							return <div key = {index}>{object.label}</div>
 						})}
 					</div>
 					<div className="col-5">

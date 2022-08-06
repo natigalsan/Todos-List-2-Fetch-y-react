@@ -1,6 +1,17 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 export const AddTarea = ({ Tareas, setLista }) => {
+    const [tasks, setTasks] = useState ("")
+    const [task0List, setTaskList] = useState([]);
+    const [loading, setLoading] = useState();
+
+	// Petición de la API:
+	useEffect(()=>{
+		
+
+	},[]);
+
+
 	return (
 		<>
 			<div className="row">
@@ -12,6 +23,7 @@ export const AddTarea = ({ Tareas, setLista }) => {
 								<div className="col-5" key={i}>
 									{e}
 								</div>
+                                {/*-------------- BUTTON DE ELIMINAR TAREA---------------- */}
 								<div className="col-3">
 									<button
 										onClick={function () {
